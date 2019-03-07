@@ -12,7 +12,7 @@ with open('coordinates.json') as infile:
 
 start = [coordinates['spawn_point']['y'], coordinates['spawn_point']['x']]
 
-target_name = 'Charsi'
+target_name = 'Warriv'
 target = [coordinates['targets'][target_name]['y'], coordinates['targets'][target_name]['x']]
 
 # Possible moves (N, Ne, E, Se, S, Sw, W, Nw)
@@ -37,7 +37,7 @@ alpha = 0.1
 gamma = 0.6
 epsilon = 0.1
 
-for i in range(1000):
+for i in range(100):
     coord_state = start
     state = possible_states.index(coord_state)
 
@@ -92,4 +92,5 @@ for i in range(1000):
 
     epoch_time = time.time() - start_time
     print(f'Epoch time: {epoch_time}')
+    print(f'Steps: {len(route)}')
     np.save(f'q_table_{target_name}.npy', q_table)
