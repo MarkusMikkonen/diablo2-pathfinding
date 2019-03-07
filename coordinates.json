@@ -1,0 +1,15 @@
+{
+  "spawn_point": {"x": 62, "y": 37},
+
+  "targets": {
+    "Charsi": {"x": 24, "y": 27},
+    "Akara": {"x": 122, "y": 16},
+    "Kashya": {"x": 81, "y": 36},
+    "Warriv": {"x": 56, "y": 45},
+    "Cain": {"x": 74, "y": 51},
+    "Gheed": {"x": 25, "y": 88},
+    "Chest": {"x": 56, "y": 39},
+    "Waypoint": {"x": 89, "y": 19},
+    "Town Exit": {"x": 154, "y": 54}
+  }
+}
