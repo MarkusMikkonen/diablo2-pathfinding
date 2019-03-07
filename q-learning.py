@@ -34,7 +34,7 @@ print(q_table.shape)
 
 # Hyperparameters
 alpha = 0.1
-gamma = 0.6
+gamma = 0.75
 epsilon = 0.1
 
 for i in range(100):
@@ -63,11 +63,11 @@ for i in range(100):
         # If location blocked, keep last state
         if coord_next_state in blocked_states:
             coord_next_state = coord_state
-            reward = -10
+            reward = -1
 
         # Done, congrats!
         elif coord_next_state == target:
-            reward = 100
+            reward = 10
             done = True
 
         # Give -1 reward every timestep if not end
