@@ -5,14 +5,15 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 
+target_name = 'Waypoint'
+
 game_map = np.load('array_map.npy')
 
 with open('coordinates.json') as infile:
     coordinates = json.load(infile)
 
-start = [coordinates['spawn_point']['y'], coordinates['spawn_point']['x']]
 
-target_name = 'Warriv'
+start = [coordinates['spawn_point']['y'], coordinates['spawn_point']['x']]
 target = [coordinates['targets'][target_name]['y'], coordinates['targets'][target_name]['x']]
 
 # Possible moves (N, Ne, E, Se, S, Sw, W, Nw)
@@ -33,11 +34,11 @@ else:
 print(q_table.shape)
 
 # Hyperparameters
-alpha = 0.1
+alpha = 0.5
 gamma = 0.75
 epsilon = 0.1
 
-for i in range(100):
+for i in range(100000):
     coord_state = start
     state = possible_states.index(coord_state)
 

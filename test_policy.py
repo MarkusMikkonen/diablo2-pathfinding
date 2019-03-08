@@ -4,7 +4,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 
-target_name = 'Warriv'
+target_name = 'Gheed'
 
 game_map = np.load('array_map.npy')
 q_table = np.load(f'q_table_{target_name}.npy')
@@ -23,7 +23,7 @@ possible_states = np.transpose(np.nonzero(game_map)).tolist()
 # Create coordinates for blocked positions.
 blocked_states = np.transpose(np.where(game_map == 0)).tolist()
 
-for i in range(100):
+for i in range(10):
     coord_state = start
     state = possible_states.index(coord_state)
     route = [coord_state]
